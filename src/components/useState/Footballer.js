@@ -69,13 +69,7 @@ function Footballer() {
 
   return (
     <div>
-      <div className="List">
-        <button
-          className="waves-effect waves-light btn"
-          onClick={saveFootballer}
-        >
-          Add Random Footballer
-        </button>
+      <div className="List center">
         <ul className="collection">
           {footballerList.map(item => (
             <a
@@ -89,8 +83,8 @@ function Footballer() {
           ))}
         </ul>
       </div>
-      <div className="Profile row">
-        <h4>Add/Edit Player</h4>
+      <div className="Profile row center">
+        <h6>Add/Edit Player</h6>
         <input type="hidden" value={footballer.id} />
         <input
           placeholder="Player Name"
@@ -108,10 +102,10 @@ function Footballer() {
         />
         <div className="col-md-12">
           <button
-            className="waves-effect waves-light btn light-blue btn-block"
+            className="waves-effect waves-light btn btn-block"
             onClick={saveFootballer}
           >
-            Save
+            Save Footballer
           </button>
         </div>
       </div>
