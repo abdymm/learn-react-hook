@@ -60,7 +60,7 @@ function Team() {
             onChange={e => setTeam({ ...team, league: e.target.value })}
           ></input>
 
-          <textarea onChange={e => setInfo(e.target.value)}>{info}</textarea>
+          <textarea value="" onChange={e => setInfo(e.target.value)}>{info}</textarea>
         </div>
         <button
           className="waves-effect waves-light btn btn-block"
