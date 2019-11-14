@@ -1,5 +1,9 @@
-import React, { useReducer } from "react";
+import React, { useState, useReducer } from "react";
 
+const initialPeople = {
+  id: 0,
+  name: ""
+};
 const initialPeoples = [
   {
     id: 2,
@@ -15,41 +19,75 @@ const initialPeoples = [
     name: "Mulky"
   }
 ];
-const reducer = (state, action) => {
-  switch (action) {
-    case "asc":
-      return [...state].sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
-    case "desc":
-      return [...state].sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
-    case "reset":
-      return initialPeoples;
-    case "clear":
-      return [];
-    default:
-      return state;
-  }
-};
 
 function RandomPeople() {
+  const [people, setPeople] = useState(initialPeople);
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "asc":
+        return [...state].sort((a, b) => parseFloat(a.id) - parseFloat(b.id));
+      case "desc":
+        return [...state].sort((a, b) => parseFloat(b.id) - parseFloat(a.id));
+      case "reset":
+        return initialPeoples;
+      case "clear":
+        return [];
+      case "add":
+        console.log("NewPeople", people);
+        console.log("NewPeople", state);
+        const newPeople = people;
+        newPeople.id = state.length+1;
+        return [...state, newPeople];
+      default:
+        return state;
+    }
+  };
+
   const [peoples, dispatch] = useReducer(reducer, initialPeoples);
-  console.log(peoples);
+
   return (
     <div className="center">
       {peoples.map(people => (
         <p>{people.name}</p>
       ))}
       <div className="people-box-action">
-        <button className="btn btn-success" onClick={() => dispatch("asc")}>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch({ type: "asc" })}
+        >
           Sort ASC
         </button>
-        <button className="btn btn-success" onClick={() => dispatch("desc")}>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch({ type: "desc" })}
+        >
           Sort DESC
         </button>
-        <button className="btn btn-success" onClick={() => dispatch("reset")}>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch({ type: "reset" })}
+        >
           RESET
         </button>
-        <button className="btn btn-success" onClick={() => dispatch("clear")}>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch({ type: "clear" })}
+        >
           CLEAR
+        </button>
+      </div>
+      <div className="row">
+        <input
+          type="text"
+          value={people.name}
+          onChange={e => setPeople({ ...people, name: e.target.value })}
+        ></input>
+        <button
+          className="btn btn-success"
+          onClick={() => dispatch({ type: "add" })}
+        >
+          ADD
         </button>
       </div>
     </div>
