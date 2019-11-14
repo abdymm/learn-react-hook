@@ -4,9 +4,10 @@ import "./App.css";
 import Footballer from "./components/useState/Footballer";
 import Team from "./components/useEffect/Team";
 import CountDownContainer from "./components/useEffect/CountDownContainer";
+import RandomPeople from "./components/useReducer/RandomPeople";
+import Counter from "./components/useReducer/Counter";
 
 function App() {
-
   return (
     <div className="App">
       <div className="use-state">
@@ -24,14 +25,14 @@ function App() {
             <CountDownContainer />
           </div>
         </div>
-        
+
         <div className="card">
           <div className="card-content">
-            <h3 className="center">III. Fetch Data</h3>
-            
+            <h3 className="center">III. useReducer</h3>
+            <RandomPeople />
+            <Counter />
           </div>
         </div>
-
       </div>
     </div>
   );
