@@ -34,10 +34,8 @@ function RandomPeople() {
       case "clear":
         return [];
       case "add":
-        console.log("NewPeople", people);
-        console.log("NewPeople", state);
         const newPeople = people;
-        newPeople.id = state.length+1;
+        newPeople.id = state.length + 1;
         return [...state, newPeople];
       default:
         return state;
