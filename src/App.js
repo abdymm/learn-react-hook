@@ -11,16 +11,24 @@ import CounterMain from "./components/useReducerContext/CounterMain";
 import FetchDataUseState from "./components/useState/FetchDataUseState";
 import FetchDataUseReducer from "./components/useReducer/FetchDataUseReducer";
 
+import Dzikir from "./components/useCallback/Dzikir";
+
 function App() {
   return (
     <div className="App">
       <div className="use-state">
         <div className="card">
           <div className="card-content">
+            <h3 className="center">VI. useCallback Dzikir</h3>
+            <Dzikir />
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-content">
             <h3 className="center">V. useReducer/useState fetching data</h3>
             <h4>with useState</h4>
             <FetchDataUseState />
-            <hr/>
+            <hr />
             <h4>with useReducer</h4>
             <FetchDataUseReducer />
           </div>
