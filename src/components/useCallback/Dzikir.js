@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Counter from "./Counter";
 import ButtonIncrement from "./ButtonIncrement";
+import Title from "./Title";
 
 function Dzikir() {
   const [countSub, setCountSub] = useState(0);
@@ -25,7 +26,7 @@ function Dzikir() {
 
   return (
     <div>
-      <h4>Dzikir</h4>
+      <Title />
       <div className="row center">
         <div className="col m4">
           <Counter count={countSub}>SUBHANALLAH</Counter>
