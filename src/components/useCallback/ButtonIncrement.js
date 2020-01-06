@@ -14,8 +14,4 @@ function ButtonIncrement({ onClick, children }) {
   );
 }
 
-function areEqual(prevProps, nextProps) {
-  // console.log("Diff-Props-prev", prevProps);
-  // console.log("Diff-Props-next", nextProps);
-}
-export default React.memo(ButtonIncrement, areEqual);
+export default React.memo(ButtonIncrement);
