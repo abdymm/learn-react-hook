@@ -1,7 +1,7 @@
 import React from "react";
 
 function Title() {
-  console.log("Rendering TITLE");
+  console.log("Rendering-TITLE");
   return <h4>Dzikir App</h4>;
 }
 

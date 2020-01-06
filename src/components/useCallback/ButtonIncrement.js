@@ -1,7 +1,7 @@
 import React from "react";
 
 function ButtonIncrement({ onClick, children }) {
-  console.log("Rendering", children);
+  console.log("Rendering-Button", children);
   return (
     <div>
       <button
@@ -15,7 +15,7 @@ function ButtonIncrement({ onClick, children }) {
 }
 
 function areEqual(prevProps, nextProps) {
-  console.log("Diff-Props-prev", prevProps);
-  console.log("Diff-Props-next", nextProps);
+  // console.log("Diff-Props-prev", prevProps);
+  // console.log("Diff-Props-next", nextProps);
 }
 export default React.memo(ButtonIncrement, areEqual);

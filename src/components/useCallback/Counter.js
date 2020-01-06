@@ -1,7 +1,7 @@
 import React from "react";
 
 function Counter({ count, children }) {
-  console.log("Rendering", children);
+  console.log("Rendering-Counter", children);
   return (
     <div>
       <h5>{count}</h5>
