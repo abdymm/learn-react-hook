@@ -12,6 +12,8 @@ import FetchDataUseState from "./components/useState/FetchDataUseState";
 import FetchDataUseReducer from "./components/useReducer/FetchDataUseReducer";
 
 import Dzikir from "./components/useCallback/Dzikir";
+import Login from "./components/useRef/Login";
+import CustomHooks from "./components/customHook/CustomHooks";
 
 function App() {
   return (
@@ -19,10 +21,25 @@ function App() {
       <div className="use-state">
         <div className="card">
           <div className="card-content">
+            <h3 className="center">VIII. Custom Hooks</h3>
+            <CustomHooks />
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-content">
+            <h3 className="center">VII. userRef Login</h3>
+            <Login />
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="card-content">
             <h3 className="center">VI. useCallback Dzikir</h3>
             <Dzikir />
           </div>
         </div>
+
         <div className="card">
           <div className="card-content">
             <h3 className="center">V. useReducer/useState fetching data</h3>
