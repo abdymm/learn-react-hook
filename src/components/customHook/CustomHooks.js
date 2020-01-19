@@ -21,7 +21,7 @@ function CustomHooks() {
       <h5 className="center">Use Counter</h5>
       <div className="row">
         <div className="col m6">
-          <Counter1 initialValue={394} />
+          <Counter1 initialValue={0} />
         </div>
         <div className="col m6">
           <Counter2 initialValue={112} />

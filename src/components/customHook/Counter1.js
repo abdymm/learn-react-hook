@@ -10,7 +10,9 @@ function Counter1({ initialValue }) {
       <div className="row">
         <div className="col m4">
           <button
-            onClick={increament}
+            onClick={() => {
+              increament(2,3);
+            }}
             className="waves-effect waves-light btn btn-block"
           >
             Increament

@@ -50,18 +50,11 @@ function App() {
             <FetchDataUseReducer />
           </div>
         </div>
-        <div className="card">
-          <div className="card-content">
-            <h3 className="center">I. useState</h3>
-            <Footballer />
-          </div>
-        </div>
 
         <div className="card">
           <div className="card-content">
-            <h3 className="center">II. useEffect</h3>
-            <Team />
-            <CountDownContainer />
+            <h3 className="center">IV. useReducer with useContext</h3>
+            <CounterMain />
           </div>
         </div>
 
@@ -72,11 +65,17 @@ function App() {
             <Counter />
           </div>
         </div>
-
         <div className="card">
           <div className="card-content">
-            <h3 className="center">IV. useReducer with useContext</h3>
-            <CounterMain />
+            <h3 className="center">II. useEffect</h3>
+            <Team />
+            <CountDownContainer />
+          </div>
+        </div>
+        <div className="card">
+          <div className="card-content">
+            <h3 className="center">I. useState</h3>
+            <Footballer />
           </div>
         </div>
       </div>
